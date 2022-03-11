@@ -1,0 +1,55 @@
+.main-wrapper{
+    background: #161d2d;
+    border: 2px solid rgb(153, 153, 153);
+    border-radius: 20px;
+    color: white;
+}
+.font-size{
+    font-weight: 400;
+}
+.header-uid-id-wrap{
+    width: 100%;
+}
+.card{
+    box-shadow: 10px 10px 0px -1px rgb(255 255 255 / 30%);
+    margin-bottom: 25px;
+    background-image: linear-gradient(to right, black 90%, rgb(49, 0, 0) 20%);
+   color: white;
+}
+.wrap-for-id-uid{
+    display: flex;
+}
+.title-data{
+    font-size: 20px;
+}
+.wrapper-for-body{
+    width: 60%;
+}
+.body-data{
+    font-size: 17px;
+}
+.img{
+ width: 100%;
+ border-top-left-radius:25px ;
+ border-bottom-left-radius:25px ;
+}
+.id-data,.uid-data{
+    font-size: 22px;
+    border: 1px solid;
+    padding: 5px 30px;
+    margin: 0px 20px 0px 0px;
+    border-bottom-right-radius: 18px;
+}
+.hr{
+    color: whitesmoke;
+    height: 2px;
+    background-color: whitesmoke;
+    width: 60%;
+    margin-bottom: 15px;
+}
+
+.edit,.delete-button{
+    font-size: 22px;
+    margin-right: 20px;
+    padding: 5px 25px;
+}

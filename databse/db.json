@@ -1,0 +1,19 @@
+{
+  "Posts": [
+    {
+      "title": "kedar",
+      "body": "patil",
+      "id": 1
+    },
+    {
+      "title": "shivani",
+      "body": "didi",
+      "id": 2
+    },
+    {
+      "title": "neeta ",
+      "body": "aai",
+      "id": 3
+    }
+  ]
+}

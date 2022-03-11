@@ -1,0 +1,10 @@
+body{
+    background-color: #110f16;
+    color: white;
+  }
+.main-wrapper-for-addpost{
+    background: #161d2d;
+    border: 2px solid rgb(153, 153, 153);
+    border-radius: 20px;
+    color: white;
+ }
