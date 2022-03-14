@@ -8,13 +8,13 @@ type Props = {
 
 }
 
-const Edit = (props: Props) => {
+const Edit = () => {
 //context
   const [data,setData] = useContext(PostContext);
   
   //input values 
-const [title,setTitle] = useState<string>();
-const [body,setBody] = useState<string>();
+const [Etitle,setEtitle] = useState<string>();
+const [Ebody,setEbody] = useState<string>();
 
 //params
   const {id} = useParams();
@@ -24,8 +24,8 @@ const [body,setBody] = useState<string>();
 useEffect(()=>{
   fetch(`http://localhost:3333/Posts/${id}`)
   .then(res => res.json())
-  .then(data => {setTitle(data.title)
-    setBody(data.body)
+  .then(data => {setEtitle(data.title)
+    setEbody(data.body)
   })  
 },[])
   
@@ -36,8 +36,8 @@ useEffect(()=>{
     fetch(`http://localhost:3333/Posts/${id}`, {
       method: 'PUT',
       body: JSON.stringify({
-        title: title,
-        body: body,
+        title: Etitle,
+        body: Ebody,
       }),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -67,8 +67,8 @@ useEffect(()=>{
           className="form-control"
           id="usr"
           placeholder="Enter the title"
-          value={title}
-          onChange={(e)=>setTitle(e.target.value)}
+          value={Etitle}
+          onChange={(e)=>setEtitle(e.target.value)}
         />
       </div>
       <div className="form-group">
@@ -80,8 +80,8 @@ useEffect(()=>{
           rows={4}
           id="comment"
           placeholder="Enter the body"
-          value={body}
-          onChange={(e)=>setBody(e.target.value)}
+          value={Ebody}
+          onChange={(e)=>setEbody(e.target.value)}
         ></textarea>
       </div>
       <div className="input-group-append">

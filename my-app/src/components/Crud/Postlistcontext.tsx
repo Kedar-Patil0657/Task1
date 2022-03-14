@@ -22,7 +22,7 @@ export const PostProvider = (props :postProps) => {
  useEffect(()=>{
     fetch('http://localhost:3333/Posts')
     .then(res=>res.json())
-    .then(data =>setPost(data))
+    .then(data =>setPost(data.reverse()))
  },[])
 
  return(

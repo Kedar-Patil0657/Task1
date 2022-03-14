@@ -13,7 +13,7 @@ const App = (props: Props) => {
     <Router>  
       <Routes>
       <Route path='/add' element={ <Add/>} />
-      <Route path='/edit/:id' element={<Edit/>} />
+      <Route path='/edit/:id' element={<Add/>} />
       <Route path='/' element={<Home/>} />
       </Routes>
     </Router>
