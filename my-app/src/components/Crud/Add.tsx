@@ -2,7 +2,6 @@ import React, { useState ,useContext} from 'react'
 import './Add.css';
 import {Link} from "react-router-dom";
 import {PostContext} from "./Postlistcontext";
-import { History } from "history";
 
 
 

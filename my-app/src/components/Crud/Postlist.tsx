@@ -1,4 +1,4 @@
-import React ,{useContext,useEffect}from 'react';
+import React ,{useContext}from 'react';
 import { Link } from 'react-router-dom';
 import './Postlist.css';
  import {PostContext} from "./Postlistcontext";
@@ -47,7 +47,8 @@ setData(newData);
             </div>
             <div className="wrap-for-id-uid mt-5">
               <div className="id-data">Id : {ele.id}</div>
-              <Link to={`/edit/${ele.id}`} state={ele.id} className='btn btn-warning edit'>Edit</Link>
+              {/* <Link to={`/edit/${ele.id}`} state={ele.id} className='btn btn-warning edit'>Edit</Link> */}
+              <Link to={`/edit/${ele.id}`}  className='btn btn-warning edit'>Edit</Link>
               <button
                 className="delete-button btn btn-danger" 
                 onClick={()=>deleteData(ele.id)}

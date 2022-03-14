@@ -1,5 +1,5 @@
-import React,{useContext}from 'react'
-import {Link, useLocation} from 'react-router-dom';
+import React,{useContext, useEffect}from 'react'
+import {Link, useLocation,useParams} from 'react-router-dom';
 import { useState} from "react";
 import {PostContext} from "./Postlistcontext";
 
@@ -9,14 +9,27 @@ type Props = {
 }
 
 const Edit = (props: Props) => {
-
+//context
   const [data,setData] = useContext(PostContext);
-  const location =  useLocation();
-  const id = location.state;
   
-//input values 
+  //input values 
 const [title,setTitle] = useState<string>();
 const [body,setBody] = useState<string>();
+
+//params
+  const {id} = useParams();
+
+//getting data from api 
+
+useEffect(()=>{
+  fetch(`http://localhost:3333/Posts/${id}`)
+  .then(res => res.json())
+  .then(data => {setTitle(data.title)
+    setBody(data.body)
+  })  
+},[])
+  
+
 
   const  handleEdit = () =>{
     
@@ -54,6 +67,7 @@ const [body,setBody] = useState<string>();
           className="form-control"
           id="usr"
           placeholder="Enter the title"
+          value={title}
           onChange={(e)=>setTitle(e.target.value)}
         />
       </div>
@@ -66,6 +80,7 @@ const [body,setBody] = useState<string>();
           rows={4}
           id="comment"
           placeholder="Enter the body"
+          value={body}
           onChange={(e)=>setBody(e.target.value)}
         ></textarea>
       </div>

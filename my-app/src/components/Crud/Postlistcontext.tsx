@@ -1,4 +1,3 @@
-import { type } from '@testing-library/user-event/dist/type';
 import React, { useState,createContext, useEffect } from 'react';
 
 type postProps = {
