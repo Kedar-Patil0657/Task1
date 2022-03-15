@@ -21,13 +21,6 @@ const [Ebody,setEbody] = useState<string>();
 
 //getting data from api 
 
-useEffect(()=>{
-  fetch(`http://localhost:3333/Posts/${id}`)
-  .then(res => res.json())
-  .then(data => {setEtitle(data.title)
-    setEbody(data.body)
-  })  
-},[])
   
 
 
